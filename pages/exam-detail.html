@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Exam | Chaudhary English Classes</title>
+
+</head>
+
+<body>
+
+    <main>
+
+        <h1 id="examTitle">
+            Competitive Exam
+        </h1>
+
+        <p>
+            Exam detail page coming soon.
+        </p>
+
+        <a href="../index.html">
+            ← Back to Home
+        </a>
+
+    </main>
+
+
+    <script>
+
+        const params = new URLSearchParams(
+            window.location.search
+        );
+
+        const exam = params.get("exam");
+
+        const examNames = {
+            nda: "NDA English",
+            airforce: "Air Force English",
+            defence: "Defence Exams"
+        };
+
+        if (exam && examNames[exam]) {
+
+            document.getElementById("examTitle").textContent =
+                examNames[exam];
+
+        }
+
+    </script>
+
+</body>
+
+</html>
