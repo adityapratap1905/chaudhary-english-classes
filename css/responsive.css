@@ -1,0 +1,41 @@
+/* Mobile overflow protection and layout overrides. */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    /* These grids are defined inline on the home page, so override their
+       minimum card widths here instead of letting them widen the viewport. */
+    .testimonials-grid,
+    .contact-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .contact-grid {
+        gap: 28px !important;
+        padding: 24px !important;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px !important;
+    }
+
+    .testimonial-card {
+        min-width: 0;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+    }
+
+    .floating-card {
+        max-width: calc(100% - 20px);
+    }
+}
