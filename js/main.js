@@ -48,6 +48,8 @@ const siteHeader = document.getElementById("siteHeader");
 
 window.addEventListener("scroll", () => {
 
+    if (!siteHeader) return;
+
     if (window.scrollY > 20) {
 
         siteHeader.classList.add("scrolled");
